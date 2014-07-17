@@ -1,0 +1,16 @@
+{
+	"name": "WhatsSite",
+	"version": "1.0",
+	"manifest_version":2,
+	"description": "easily get the catogory of the certain site",
+	"icons": {
+		"128": "logo.png"
+	},
+	"background": "background.html",
+	"permissions": ["http://*/*", "https://*/*"],
+	"browser_action": {
+		"default_title": "",
+		"default_icon": "logo.png",
+		"default_popup": "popup.html"
+	}
+}
