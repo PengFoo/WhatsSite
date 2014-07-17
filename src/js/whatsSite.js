@@ -71,7 +71,7 @@ function getSend() {
 				if (linkWithA.indexOf("http") != -1)
 					$("#siteSource").html($("#siteSource").html() + linkWithA + "<br/>");
 				if (linkWithA.indexOf("baike.baidu" != -1)) {
-					var baikeResult = getBaike(linkWithA);
+					//var baikeResult = getBaike(linkWithA);
 				}
 
 
@@ -87,29 +87,27 @@ function getSend() {
 //there is other information useful include site title
 function getMetas(linkUrl) {
 	$.ajax({
-			url: linkUrl,
-			type: "get",
-			jsonp: "callback",
-			success: function(data) {
+		url: linkUrl,
+		type: "get",
+		jsonp: "callback",
+		success: function(data) {
 
-			};
-			//$("#siteSource").text();
-			//$("#siteSource").text(data);
-			//console.log(data);
 		}
+		//$("#siteSource").text();
+		//$("#siteSource").text(data);
+		//console.log(data);
 	});
 }
 
 function getBaike(linkUrl) {
 	$.ajax({
-			url: linkUrl,
-			type: "get",
-			jsonp: "callback",
-			success: function(data) {
+		url: linkUrl,
+		type: "get",
+		jsonp: "callback",
+		success: function(data) {
 
-			};
-			
 		}
+
 	});
 }
 /**
