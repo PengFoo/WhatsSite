@@ -1,16 +1,23 @@
 {
 	"name": "WhatsSite",
 	"version": "1.0",
-	"manifest_version":2,
+	"manifest_version": 2,
 	"description": "easily get the catogory of the certain site",
 	"icons": {
 		"128": "logo.png"
 	},
-	"background": "background.html",
-	"permissions": ["http://*/*", "https://*/*"],
+	"background": {
+		"scripts": ["./js/jquery-1.11.1.min.js","./js/background.js"]
+	},
+	
+	"permissions": ["tabs", "http://*/*", "https://*/*"],
 	"browser_action": {
 		"default_title": "",
 		"default_icon": "logo.png",
 		"default_popup": "popup.html"
-	}
+	},
+	"content_scripts": [{
+		"matches": ["http://*/*", "https://*/*"],
+		"js": ["./js/jquery-1.11.1.min.js", "./js/content_scripts.js"]
+	}]
 }
